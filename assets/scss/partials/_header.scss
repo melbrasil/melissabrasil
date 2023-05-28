@@ -1,0 +1,28 @@
+header {
+    background-color: $primary-color;
+}
+
+nav a {
+    display: flex;
+    align-content: stretch;
+    color: #fff;
+    text-decoration: none;
+    &.active {
+        text-decoration: underline;
+    }
+}
+
+
+ul {
+    display: flex;
+    list-style: none;
+    column-gap: 10px;
+    color: #fff;
+}
+
+
+h2 {
+    @include textMedium;
+}
+
+

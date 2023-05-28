@@ -1,0 +1,15 @@
+footer {
+    background-color: $primary-color;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/*footer p {
+    display: flex;
+    justify-content: center;
+}*/
+
+p {
+    @include textSmall;
+}
