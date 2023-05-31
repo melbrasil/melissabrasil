@@ -1,15 +1,25 @@
 footer {
     background-color: $primary-color;
-    height: 50px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
-/*footer p {
+.footer-row {
     display: flex;
-    justify-content: center;
-}*/
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 1rem;
 
-p {
-    @include textSmall;
-}
+    &:first-child {
+        background-color: $main-background-color;
+        color: $primary-color;
+    }
+
+    &:last-child {
+        background-color: $primary-color;
+        color: $main-background-color;
+    }
+} 
+
+
