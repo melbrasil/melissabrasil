@@ -1,4 +1,3 @@
-
 /*header {
     background-color: red;
     width: 100%;
@@ -13,7 +12,81 @@
 }*/
 
 header {
-    padding: 0 1rem;
+    display: block;
+    position: fixed;
+    background-color: #111;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+#header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+}
+
+.btn--toggle-menu {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: $medium) {
+        display: none;
+    }
+
+    svg {
+        stroke: $primary-color;
+        fill: $primary-color;
+    }
+}
+
+#main-navigation {
+    display: none;
+
+    @media (min-width: $medium) {
+        display: block;
+    }
+
+    &.menu-is-open {
+        display: flex;
+        position: absolute;
+        background: $main-background-color;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100svh;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        ul {
+            flex-direction: column;
+            font-size: 2rem;
+            gap: 40px;
+        }
+
+        @media (min-width: $medium) {
+            display: block;
+            position: static;
+            background: transparent;
+            width: auto;
+            height: auto;
+
+            ul {
+                flex-direction: row;
+                font-size: 1.25rem;
+                column-gap: 30px;
+            }
+        }
+    }
 }
 
 nav a {
@@ -21,11 +94,11 @@ nav a {
     align-content: stretch;
     color: $primary-color;
     text-decoration: none;
+
     &.active {
         text-decoration: underline;
     }
 }
-
 
 ul {
     display: flex;
@@ -40,6 +113,3 @@ li {
     color: $primary-color;
     line-height: 1.5;
 }
-
-
-

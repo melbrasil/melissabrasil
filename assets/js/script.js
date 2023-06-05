@@ -1,4 +1,4 @@
-//alert("esta a funcionar") 
+// menu selecionado --------
 
 for(var i = 1; i < 30; i++) {
     console.log('Exercício 1 repetição ' + i + ' 🏃‍♂️')
@@ -19,3 +19,15 @@ for(var i = 0; i < anchor.length; i++) {
         document.body.classList.add("home")
     }    
 }
+
+
+// menu hamburguer --------
+
+var btnToggleMenu = document.querySelector('.btn--toggle-menu');
+
+function toggleMenu() {
+    var mainNav = document.querySelector('#main-navigation');
+    mainNav.classList.toggle('menu-is-open')
+}
+
+btnToggleMenu.addEventListener("click", toggleMenu)
