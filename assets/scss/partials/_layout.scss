@@ -2,12 +2,16 @@
 
 html,
 body {
+  height: 100svh;
   box-sizing: border-box;
   font-size: 16px;
   margin: 0;
   padding: 0;
   background-color: $main-background-color;
   color: $primary-color;
+  &.no-scroll {
+    overflow-y: hidden;
+  }
 }
 
 main {
@@ -25,9 +29,16 @@ main {
   background: $primary-color;
 }
 
+:visited {
+  color: $primary-color;
+}
+
 
 h1 {
-  @include textH1
+  @include textH1;
+  @media (min-width: $large) {
+    font-size: 2rem;
+  }
 }
 
 h2 {
@@ -46,6 +57,47 @@ p {
   @include textBody
 }
 
+.link_animation {
+  background-image: linear-gradient(
+    to right,
+    #fff,
+    #fff 50%,
+    $primary-color 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:before {
+    content: '';
+    background: #fff;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background-position: 0;
+   }
+   
+   &:hover::before {
+     width:100%;
+   }
+
+}
+
+
+
+
 /*------ animação quote ------*/
 .marquee {
   white-space: nowrap;
@@ -59,49 +111,18 @@ p {
 .marquee_content {
   display: block;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Prosto One', cursive;
   transform: translateX(100%);
-  animation: move 30s linear infinite
-  
+  animation: move 20s linear infinite;
+  // desktop !!! animation: move 30s linear infinite;
 }
-
 
 p {
   margin-bottom: 8px;
 }
 
-
 ul {
   padding-left: 0;
 }
 
-@media (min-width: 850px) {
-  .flex-grid {
-    display: flex;
-    flex-direction: row;
-    column-gap: 30px;
-  }
-
-  .column {
-    width: 33.33%;
-  }
-
-  .column:not(:last-child) {
-    margin-bottom: 0;
-  }
-}
-
-
-@media (min-width: $medium) {
-  main {
-    max-width: 100%;
-    padding: 30px;
-  }
-}
-
-@media (min-width: $large) {
-  main {
-    max-width: 1130px;
-  }
-}

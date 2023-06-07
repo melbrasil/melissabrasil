@@ -1,9 +1,19 @@
 .contacts_text {
     color: $primary-color;
-    font-size: 4rem;
+    font-size: 2.35rem;
+    font-family: 'Prosto One', cursive;
+    text-align: center;
 }
 
-.contacts_page {
+.contacts_footer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
+}
+
+.contacts_section {
+    align-items: center;
+    justify-content: center;
+    height: auto;
 }

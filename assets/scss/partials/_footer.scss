@@ -2,6 +2,8 @@ footer {
     background-color: $primary-color;
     display: flex;
     flex-direction: column;
+    bottom: 0;
+
 }
 
 .footer_list {
@@ -27,4 +29,7 @@ footer {
     }
 } 
 
+.contacts_section {
+    height: 100svh;
+}
 
