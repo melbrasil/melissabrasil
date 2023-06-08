@@ -4,11 +4,19 @@ footer {
     flex-direction: column;
     bottom: 0;
 
+    p {
+        margin: 0.5rem 0;
+    }
+
 }
 
 .footer_list {
     display: flex;
     flex-direction: column;
+    @media (min-width: $medium) {
+        flex-direction: row;
+        gap: 2rem;
+    }
 }
 
 .footer-row {
@@ -17,6 +25,10 @@ footer {
     align-items: baseline;
     justify-content: space-between;
     padding: 0 1rem;
+
+    @media (min-width: $medium) {
+        flex-direction: row;
+    }
 
     &:first-child {
         background-color: $main-background-color;
@@ -29,7 +41,4 @@ footer {
     }
 } 
 
-.contacts_section {
-    height: 100svh;
-}
 

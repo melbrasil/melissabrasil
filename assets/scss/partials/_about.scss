@@ -30,6 +30,7 @@
 .skills_collumns {
     height: auto;
     margin-bottom: 32px;
+    margin-top: 0;
 }
 
 .justify {
@@ -37,8 +38,28 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
+}
 
 .skill_ranking {
     color: #787878;
+}
+
+@media (min-width: $medium) {
+
+    #skills_div {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .skills_collumns {
+        width: calc((100% / 4) - ((3 * 24px) / 4));
+
+    }
+
+    #about_text {
+        column-count: 2;
+        gap: 24px;
+    }
+
+
 }

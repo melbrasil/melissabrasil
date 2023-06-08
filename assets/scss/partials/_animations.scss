@@ -1,5 +1,78 @@
-
-
 @keyframes move {
   to { transform: translateX(-100%); }
 }
+
+/*------ animação links ------*/
+
+.link_animation {
+  @include textLinks;
+  background-image: linear-gradient(
+    to right,
+    #fff,
+    #fff 50%,
+    $primary-color 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  padding: 5px 0;
+  position: relative;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  display: flex;
+  right: 0;
+  justify-content: end;
+  width: max-content;
+
+  &:before {
+    content: '';
+    background: #fff;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background-position: 0;
+   }
+   
+   &:hover::before {
+     width:100%;
+   }
+
+}
+
+
+/*------ animação quote ------*/
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 0;
+}
+
+.marquee_content {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-family: 'Prosto One', cursive;
+  transform: translateX(100%);
+  animation: move 20s linear infinite;
+  @media (min-width: $large) {
+    animation: move 30s linear infinite;
+  }
+}
+
+
+
+ul {
+  padding-left: 0;
+}
+

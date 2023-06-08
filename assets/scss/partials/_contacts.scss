@@ -3,6 +3,12 @@
     font-size: 2.35rem;
     font-family: 'Prosto One', cursive;
     text-align: center;
+    @media (min-width: $medium) {
+        font-size: 6rem;
+    }
+    @media (min-width: $large) {
+        font-size: 8rem;
+    }
 }
 
 .contacts_footer {
@@ -17,3 +23,5 @@
     justify-content: center;
     height: auto;
 }
+
+

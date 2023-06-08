@@ -32,3 +32,5 @@ function toggleMenu() {
 }
 
 btnToggleMenu.addEventListener("click", toggleMenu)
+
+
