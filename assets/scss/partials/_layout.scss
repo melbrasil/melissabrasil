@@ -4,6 +4,7 @@ html,
 body {
   height: 100svh;
   box-sizing: border-box;
+  //overflow-x: hidden;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ body {
   &.no-scroll {
     overflow-y: hidden;
   }
+ 
 }
 
 main {
@@ -49,9 +51,6 @@ h3 {
   @include textH3
 }
 
-h4 {
-  @include textH4
-}
 
 p {
   @include textBody

@@ -2,7 +2,7 @@
 
 .hero {
   width: 100svw;
-  height: calc(100% - 61px);
+  height: calc(100% - 61.5px);
   display: flex;
   margin: 0;
   flex-direction: column;
@@ -25,7 +25,7 @@
 
   @media (min-width: $small) {
     .presentation {
-    top: calc((100vh - 201.9px) / 3);
+    top: calc((100vh - 200px) / 3);
     }
   }
 
