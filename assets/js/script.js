@@ -1,10 +1,5 @@
 // menu selecionado --------
 
-for(var i = 1; i < 30; i++) {
-    console.log('Exercício 1 repetição ' + i + ' 🏃‍♂️')
-}
-
-
 var anchor = document.querySelector("#main-navigation").querySelectorAll("a");
 console.log(anchor);
 for(var i = 0; i < anchor.length; i++) {
@@ -12,11 +7,11 @@ for(var i = 0; i < anchor.length; i++) {
         anchor[i].classList.add("active");
     }
     if(window.location.href.indexOf("about") > -1) {
-        document.body.classList.add("about")
+        document.body.classList.add("about");
     } else if (window.location.href.indexOf("contacts") > -1) {
-        document.body.classList.add("contacts")
+        document.body.classList.add("contacts");
     } else {
-        document.body.classList.add("home")
+        document.body.classList.add("home");
     }    
 }
 
@@ -31,7 +26,7 @@ function toggleMenu() {
     document.body.classList.toggle("no-scroll");
 }
 
-btnToggleMenu.addEventListener("click", toggleMenu)
+btnToggleMenu.addEventListener("click", toggleMenu);
 
 
 console.log("teste");
